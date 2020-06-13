@@ -1,0 +1,128 @@
+<html>
+
+   <head>
+   
+      <title>Covid Detector</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+<style>
+body {
+  background-image: url("https://cdn.theconversation.com/static_files/files/892/SIRanimationlow.gif?1584334098") ;
+    background-repeat: no-repeat; /* Do not repeat the image */
+	background-position: center;
+  background-size cover; /* Resize the background image to cover the entire container */
+   
+}
+
+h1.solid {border-style: solid; border-color:black;border-size:3px}
+
+</style>
+  </head>
+	
+   <body>
+  
+   
+      <form class="form-horizontal" action="{{ url_for('detect')}}" method="POST" >
+	  <div class="container bg-image responsive">
+	  <div class="row">
+	  <div class=col-lg-12>
+<h1   style="color:red;text-align:center"><b> Covid Detector </h1>
+<div class="form-group">
+<div class="col-lg-12" style="align:left;">
+         <b>Name:<br> <input type = "text"   name = "FirstName"  />
+		 
+<br>
+         <br>
+		 </div>
+		
+<div class="col-lg-12" style="align:left;">
+<b>Temperature:<br> <input type = "text" name = "Temp" />
+<br>
+<br>
+</div>
+<div class="col-lg-12" style="align:right;">
+<h5><b>Gender:</h5></b>
+<input type = "radio" name = "Gender" value = "on"> <label for="male">Male</label>
+         <input type = "radio" name = "Gender" value = "on">  <label for="female">Female</label><br>
+<br>
+</div>
+<div class="clear">
+<div class="col-lg-12" style="align:right;">
+         <b>Age:<br> <input type = "text"   name = "Age"  />
+<br>
+</div>
+<div class="col-lg-12" style="align:right;">
+<h2 style="color:red;text-align:center">   <b>Info:</h2>
+  <div class="col-sm-12" >
+         <input type = "checkbox" name = "Have you travel anywhere from last 14 days" value = "on"> Have you travel anywhere from last 14days. <br>
+ </div>
+<div class="col-lg-12" style="align:right;">
+<h2 style="color:red;text-align:center">   <b>Symptoms:</h2>
+<div class="col-sm-6" style="align:right;">
+         <input type = "checkbox" name = "Cough" value = "on"> Cough<br>
+		 </div>
+
+<div class="col-sm-6" style="align:right;">
+         <input type = "checkbox" name = "Sore Throat" value = "on"> Sore Throat<br>
+		 </div>
+		 <div class="col-sm-6" >
+         <input type = "checkbox" name = "Sleepiness" value = "on"> Sleepiness<br>
+		 </div>
+		 <div class="col-sm-6" style="align:right;">
+<input type = "checkbox" name = "Weakness " value = "on"> Weakness<br>
+</div> 
+<div class="col-sm-6" >
+         <input type = "checkbox" name = "Sleepness" value = "on"> Loss of smell<br>
+		 </div>
+<div class="col-sm-6" style="align:right;">
+         <input type = "checkbox" name = "Diabetes" value = "on"> Diabetes<br>
+		 </div>
+		<div class="col-sm-6" style="align:right;">
+<input type = "checkbox" name = "High BP " value = "on"> High BP<br>
+</div> 
+<div class="col-sm-6" style="align:right;">
+<input type = "checkbox" name = "Weak Immunity" value = "on"> Weak Immunity <br> 
+</div>
+	 <div class="col-sm-6" >
+         <input type = "checkbox" name = "Change in apetide" value = "on"> Change in apetide<br>
+		 </div>
+	
+</div>
+<div class="col-lg-12" style="align:right;">
+<h2 style="color:blue;text-align:center">   <b>Pre-existing medical conditions:</h2>
+		 <div class="col-sm-6" style="align:right;">
+<input type = "checkbox" name = "Chest Pain " value = "on"> Chest pain<br>
+</div> 
+<div class="col-sm-6" style="align:right;">
+         <input type = "checkbox" name = "Heart Problem" value = "on"> Heart Problem<br>
+		 </div>
+ <div class="col-sm-6" style="align:right;">
+<input type = "checkbox" name = "Breathing Problem " value = "on"> Breathing Problem<br> 
+</div>
+		 <div class="col-sm-6" style="align:right;">
+<input type = "checkbox" name = "Lung Disease " value = "on"> Lung Disease<br>
+</div>
+<div class="col-sm-6" style="align:right;"> 
+         <input type = "checkbox" name = "Kidney Disease" value = "on"> Kidney Disease<br>
+		 </div>
+	   <div class="container">
+	   <br>
+	   <br>
+ <div class="col-sm-12" style="left:30% ; " > 
+	     
+	 <button type="button" class="button btn btn-danger btn-lg ">Submit</button> 
+ </div>
+ </div>
+
+      </form>
+</div>
+</div>
+</div>
+</div>
+   </body>
+	
+</html>
